@@ -75,7 +75,7 @@
             android:layout_width="211dp"
             android:layout_height="68dp"
             android:layout_marginTop="76dp"
-            android:background="#E91E63"
+            android:background="#954762"
             android:text="CLICK TO SCAN"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="parent"
