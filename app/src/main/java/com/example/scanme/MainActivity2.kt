@@ -1,9 +1,17 @@
 package com.example.scanme
 
+import android.content.ClipData
+import android.content.Context
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
 import android.os.Bundle
+import android.text.ClipboardManager
+import android.text.util.Linkify
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.budiyev.android.codescanner.AutoFocusMode
@@ -12,9 +20,9 @@ import com.budiyev.android.codescanner.CodeScannerView
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
-import kotlinx.android.synthetic.main.activity_main2.tv_textview
 
-private const val  camcode=101
+
+private const val camcode = 101
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -24,9 +32,21 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        setuppernissions()
+        setupPermissions()
 
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
+        val resultTextView = findViewById<TextView>(R.id.result_textview)
+        val copyToClipboardButton = findViewById<ImageView>(R.id.copy_to_clipboard)
+
+        copyToClipboardButton.setOnClickListener {
+            if (!resultTextView.text.isNullOrEmpty()) {
+                copyToClipboard(this,resultTextView.text.toString())
+                Toast.makeText(
+                    this, "Copied to clipboard",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
 
         codeScanner = CodeScanner(this, scannerView)
 
@@ -42,13 +62,19 @@ class MainActivity2 : AppCompatActivity() {
         // Callbacks
         codeScanner.decodeCallback = DecodeCallback {
             runOnUiThread {
-                tv_textview.text=it.text
+                copyToClipboardButton.visibility = View.VISIBLE
+                resultTextView.text = it.text
+                Linkify.addLinks(resultTextView, Linkify.WEB_URLS)
             }
         }
         codeScanner.errorCallback = ErrorCallback { // or ErrorCallback.SUPPRESS
             runOnUiThread {
-                Toast.makeText(this, "Camera initialization error: ${it.message}",
-                    Toast.LENGTH_LONG).show()
+                resultTextView.text = ""
+                copyToClipboardButton.visibility = View.GONE
+                Toast.makeText(
+                    this, "Camera initialization error: ${it.message}",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
 
@@ -67,19 +93,27 @@ class MainActivity2 : AppCompatActivity() {
         super.onPause()
     }
 
-    private fun setuppernissions()
-    {
-        val permission= ContextCompat.checkSelfPermission(this,android.Manifest.permission.CAMERA)
+    private fun setupPermissions() {
+        val permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
 
-        if (permission!= PackageManager.PERMISSION_GRANTED)
-        {
+        if (permission != PackageManager.PERMISSION_GRANTED) {
             makeRequest()
         }
     }
 
-    private fun makeRequest()
-    {
-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA), camcode)
+    private fun makeRequest() {
+        ActivityCompat.requestPermissions(
+            this,
+            arrayOf(android.Manifest.permission.CAMERA),
+            camcode
+        )
+    }
+
+    private fun copyToClipboard(context: Context, text: String) {
+        val clipboard =
+            context.getSystemService(CLIPBOARD_SERVICE) as android.content.ClipboardManager
+        val clip = ClipData.newPlainText("Copied Text", text)
+        clipboard.setPrimaryClip(clip)
     }
 
     override fun onRequestPermissionsResult(
