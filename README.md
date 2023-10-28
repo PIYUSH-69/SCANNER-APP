@@ -32,7 +32,6 @@ Whether you need to digitize important documents for work or simply want to elim
 
 ![Scanner App Screenshot 1](screenshots/screenshot1.png)
 ![Scanner App Screenshot 2](screenshots/screenshot2.png)
-![Scanner App Screenshot 3](screenshots/screenshot3.png)
 
 ## Installation
 
