@@ -30,8 +30,8 @@ Whether you need to digitize important documents for work or simply want to elim
 
 ## Screenshots
 
-![Scanner App Screenshot 1](Screenshot/Screenshot_20231028_185700.png)
-![Scanner App Screenshot 2](Screenshot/Screenshot_20231028_185726.png)
+![Scanner App Screenshot 1](Screenshots/Screenshot_20231028_185700.png)
+![Scanner App Screenshot 2](Screenshots/Screenshot_20231028_185726.png)
 
 ## Installation
 
