@@ -30,8 +30,11 @@ Whether you need to digitize important documents for work or simply want to elim
 
 ## Screenshots
 
-![Scanner App Screenshot 1](Screenshots/Screenshot_20231028_185700.png)
-![Scanner App Screenshot 2](Screenshots/Screenshot_20231028_185726.png)
+
+<div align="center">
+<img src="Screenshots/Screenshot_20231028_185700.png" width="200" height="400" alt="Grocery List App Logo">
+<img src="Screenshots/Screenshot_20231028_185726.png" width="200" height="400" alt="Grocery List App Logo">
+</div>
 
 ## Installation
 
