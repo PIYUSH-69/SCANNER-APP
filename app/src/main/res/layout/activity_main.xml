@@ -13,7 +13,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E84D4D"
+        android:background="#F85454"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-186dp">
 
