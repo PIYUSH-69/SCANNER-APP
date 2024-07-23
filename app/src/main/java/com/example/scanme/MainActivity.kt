@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
 
             var intent= Intent(this, MainActivity2::class.java).apply{
-               //dsfgghd
             }
             startActivity(intent)
         }

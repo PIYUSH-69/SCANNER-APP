@@ -12,9 +12,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/csi_logo"
+        android:icon="@drawable/_6580"
         android:label="SCANNER"
-        android:roundIcon="@drawable/csi_logo"
+        android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.SCANME"
         tools:targetApi="31">

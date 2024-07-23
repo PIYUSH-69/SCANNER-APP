@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DF6767"
+    android:background="#0053F8"
     tools:context=".MainActivity">
 
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        app:autoFocusButtonColor="@color/black"
+        app:autoFocusButtonColor="@color/white"
         app:autoFocusButtonVisible="true"
         app:flashButtonColor="@android:color/white"
         app:flashButtonVisible="true"
-        app:maskColor="#534D4D" />
+        app:maskColor="#000000" />
 
     <TextView
         android:id="@+id/tv_textview"
@@ -29,9 +29,13 @@
         android:layout_marginBottom="20dp"
         android:text="@string/scan_the_qr_code"
         android:textAlignment="center"
-        app:maskColor="@color/black" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:maskColor="@color/white" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_textview"
@@ -45,10 +49,10 @@
             android:layout_margin="20dp"
             android:autoLink="web"
             android:text=""
+            android:background="@color/white"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:maskColor="@color/black" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/copy_to_clipboard"
@@ -56,10 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:src="@drawable/baseline_content_copy_24"
-            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/result_textview"
             app:layout_constraintStart_toEndOf="@id/result_textview"
             app:layout_constraintTop_toTopOf="@id/result_textview"
+            app:tint="@color/white"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

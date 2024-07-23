@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.budiyev.android.codescanner.AutoFocusMode
@@ -36,7 +37,7 @@ class MainActivity2 : AppCompatActivity() {
 
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
         val resultTextView = findViewById<TextView>(R.id.result_textview)
-        val copyToClipboardButton = findViewById<ImageView>(R.id.copy_to_clipboard)
+        val copyToClipboardButton = findViewById<ConstraintLayout>(R.id.layout)
 
         copyToClipboardButton.setOnClickListener {
             if (!resultTextView.text.isNullOrEmpty()) {
