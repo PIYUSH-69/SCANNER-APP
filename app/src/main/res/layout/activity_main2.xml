@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0053F8"
+    android:background="#91C8E4"
     tools:context=".MainActivity">
 
     <com.budiyev.android.codescanner.CodeScannerView
