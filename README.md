@@ -28,7 +28,7 @@ The QR Scanner App is a lightweight and easy-to-use mobile application built wit
 
 
 <div align="center">
-<img src="Screenshots/IMG1.jpg" width="200" height="400" alt="Grocery List App Logo">
+<img src="Screenshots/Screenshots/IMG1.jpg" width="200" height="400" alt="Grocery List App Logo">
 <img src="Screenshots/IMG2.jpg" width="200" height="400" alt="Grocery List App Logo">
 </div>
 
