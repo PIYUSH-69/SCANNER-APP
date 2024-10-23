@@ -12,21 +12,17 @@
 
 ## Description
 
-The Scanner App is a user-friendly mobile application designed to transform your smartphone into a powerful scanner. It allows you to quickly and easily scan documents, photos, and other materials, creating high-quality digital copies that you can store, share, or print.
-
-Whether you need to digitize important documents for work or simply want to eliminate clutter by going paperless, our Scanner App is the perfect solution.
+The QR Scanner App is a lightweight and easy-to-use mobile application built with Kotlin and XML. It allows users to quickly scan and decode QR codes to access relevant information or perform specific actions. Whether it's opening a URL, extracting contact details, or reading text data, the QR Scanner App delivers a seamless scanning experience.
 
 ## Features
 
-- Scan documents, photos, and other materials with ease.
-- Automatic edge detection and cropping for clean scans.
-- A variety of scan modes: color, grayscale, and black & white.
-- Enhance scan quality with filters and adjustments.
-- Save scans as PDF or image files.
-- Organize and manage your scans in a convenient document library.
-- Share scans via email, cloud storage, or social media.
-- Print scans directly from the app.
-- Secure your scans with passcode or fingerprint protection.
+- Quick Scan: Instantly scan and decode QR codes using your smartphone camera.
+- Multiple Formats: Supports various QR code types, including text, URL, contacts, Wi-Fi, and more.
+- Copy & Share: Easily copy or share scanned content with others via email, messaging apps, or social media.
+- Flashlight Support: Toggle the flashlight on/off for scanning in low-light conditions.
+- Vibration Feedback: Get instant feedback upon successful scanning.
+- User-Friendly Interface: Simple design with smooth navigation.
+- Secure & Offline: All QR code data is processed on your device for privacy.
 
 ## Screenshots
 
@@ -36,24 +32,13 @@ Whether you need to digitize important documents for work or simply want to elim
 <img src="Screenshots/IMG2.jpg" width="200" height="400" alt="Grocery List App Logo">
 </div>
 
-## Installation
-
-To install the Scanner App, follow these steps:
-
-1. Visit the [App Store](https://example.com/app-store-link) or [Google Play](https://example.com/google-play-link) on your mobile device.
-2. Search for "Scanner App" and click the "Install" button.
-3. Follow the on-screen instructions to complete the installation.
-
 ## Usage
 
-1. Launch the Scanner App on your mobile device.
-2. Place the document or photo you want to scan within the frame.
-3. The app will automatically detect the edges and crop the scan.
-4. Choose the desired scan mode (color, grayscale, or black & white).
-5. Apply filters and adjustments to enhance the scan quality, if needed.
-6. Save the scan as a PDF or image file.
-7. Organize and manage your scans in the document library.
-8. Share or print scans as necessary.
+1. Launch the QR Scanner App on your mobile device.
+2. Align the QR code within the scanner frame.
+3. The app will automatically decode the QR code and display the information.
+4. Review the scanned result and perform relevant actions like opening a URL, copying the text, or saving contact details.
+5. Access past scans in the history log for convenience.
 
 ## Contributing
 
