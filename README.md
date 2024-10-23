@@ -32,8 +32,8 @@ Whether you need to digitize important documents for work or simply want to elim
 
 
 <div align="center">
-<img src="Screenshots/Screenshot_20231028_185700.png" width="200" height="400" alt="Grocery List App Logo">
-<img src="Screenshots/Screenshot_20231028_185726.png" width="200" height="400" alt="Grocery List App Logo">
+<img src="Screenshots/IMG1.jpg" width="200" height="400" alt="Grocery List App Logo">
+<img src="Screenshots/IMG2.jpg" width="200" height="400" alt="Grocery List App Logo">
 </div>
 
 ## Installation
